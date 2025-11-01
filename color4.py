@@ -13,6 +13,7 @@ class color4:
         g=round(self.g/255,3)
         b=round(self.b/255,3)
         return [r,g,b,self.a]
+    
     def fbrightness(self):
         return (self.r+self.g+self.b)/3
     def vec4(self):
