@@ -1,6 +1,6 @@
 # init.py
 # TSAAGPM(Techie's shader architecture and graphical processing model) >> 2D Basic shader computation model demo
-# Project GitHub Repos : 
+# Project GitHub Repos : https://github.com/elyes-dagdagui/TSAAGPM_PY
 # Developer Name       : ELYES DAGDAGUI
 # Developer Email      : dagdaguielyes50@gmail.com
 # Developer GitHub     : https://github.com/elyes-dagdagui
