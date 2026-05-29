@@ -30,7 +30,7 @@ def main():
     M1=matscreen(WIDTH,HEIGHT)
     sb=shaderbasic(2)
     sb.slope2color(M1,A2,A1,0.7,2)
-    M1.save_numerical(NUMERICAL_FORM_PATH)
+    M1.save(NUMERICAL_FORM_PATH)
     gui.setup(M1)
     gui.run_normally()
 
