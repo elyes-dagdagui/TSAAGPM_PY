@@ -1,3 +1,5 @@
+# motionfs.py
+
 from math import e
 
 def expdecay(a1,a2,r,x):

@@ -1,3 +1,5 @@
+# color.py
+
 from vector3 import vector3
 from numerical import conv_dec_hex
 class color:

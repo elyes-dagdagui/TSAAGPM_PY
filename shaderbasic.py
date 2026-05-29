@@ -1,9 +1,12 @@
+# shaderbasic.py
+
 from matscreen import matscreen
-from motionprocessing import exp_lerp_routine
+from motionfs import exp_lerp_routine
 from color4 import color4
 from vector4 import vector4
 from numpy import array
 from time import sleep as dly
+
 def clamp(x,min,max):
     if(x<min):
         return min
@@ -53,3 +56,31 @@ class shaderbasic:
                     screen.pixels[i][k][3]=rgba[3]
 
                     x=x+eps
+        # diagonal top-left to bottom-right
+        elif(dir==2):
+            v=0
+            for i in range(screen.res_h,-1,-1):
+                j=i
+                x=0
+                for k in range(v):
+                    rgba=RGBA_EXP_LERP_ROUTINE(color1,color2,slope,x)
+                    screen.pixels[j][k][0]=rgba[0]
+                    screen.pixels[j][k][1]=rgba[1]
+                    screen.pixels[j][k][2]=rgba[2]
+                    screen.pixels[j][k][3]=rgba[3]
+                    x=x+eps
+                    j=j+1
+                v=v+1
+            v=screen.res_w-1
+            for i in range(1,screen.res_w):
+                j=i
+                x=0
+                for k in range(v):
+                    rgba=RGBA_EXP_LERP_ROUTINE(color1,color2,slope,x)
+                    screen.pixels[k][j][0]=rgba[0]
+                    screen.pixels[k][j][1]=rgba[1]
+                    screen.pixels[k][j][2]=rgba[2]
+                    screen.pixels[k][j][3]=rgba[3]
+                    x=x+eps
+                    j=j+1 
+                v-=1

@@ -1,3 +1,5 @@
+# color4.py
+
 from vector4 import vector4
 from numerical import conv_dec_hex
 class color4:
